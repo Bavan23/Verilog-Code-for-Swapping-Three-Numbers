@@ -30,11 +30,15 @@ Capture the waveform output and include the results in your report for verificat
 
 Verilog Code:
 
-module swap(clk); input clk; real a = 5; real b = 3; always@(posedge clk) begin a<=b; b<=a; end endmodule
+module swap(clk); input clk; real a = 5; real b = 3; real c = 7; real temp; always @(posedge clk) begin temp = a;
+a = b;
+b = c;
+c = temp;
+end endmodule
+
 
 Output:
-![image](https://github.com/user-attachments/assets/7212a80c-8c15-4442-830e-e37707bca6cf)
-
+![image](https://github.com/user-attachments/assets/435f61b7-ff85-49ca-8370-ea5180fd78fb)
 
 
 Testbench for Swapping Three Numbers:
