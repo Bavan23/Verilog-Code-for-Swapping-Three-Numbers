@@ -38,6 +38,7 @@ Output:
 
 
 Testbench for Swapping Three Numbers:
+
 module swap(clk); input clk; reg [31:0] a = 32'd5;
 reg [31:0] b = 32'd3;
 
