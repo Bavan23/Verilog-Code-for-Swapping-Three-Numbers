@@ -43,10 +43,9 @@ Output:
 
 Testbench for Swapping Three Numbers:
 
-module swap(clk); input clk; reg [31:0] a = 32'd5;
-reg [31:0] b = 32'd3;
+`timescale 1ns / 1ps
 
-always @(posedge clk) begin reg [31:0] temp; temp = a; a <= b; b <= temp;    end endmodule
+module swap_tb; reg clk; real a, b, c; swap uut ( .clk(clk) ); always #5 clk = ~clk; initial begin clk = 0; a = uut.a; b = uut.b; c = uut.c; $monitor("At time %t, a = %f, b = %f, c = %f", $time, uut.a, uut.b, uut.c); #50; $finish; end endmodule
 
 Output:
 
