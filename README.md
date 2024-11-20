@@ -70,8 +70,8 @@ end
 endmodule
 ```
 Output:
+![Screenshot 2024-11-20 155651](https://github.com/user-attachments/assets/b961419e-0941-4390-9077-3120555a34f6)
 
-![image](https://github.com/user-attachments/assets/d789c895-b047-4343-b11f-521c8a0948ab)
 
 
 # Conclusion
